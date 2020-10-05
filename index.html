@@ -58,29 +58,28 @@
         </div>
       </section>
     </div>
-    <div class="container-fluid p-0">
+    <div id="topics-container" class="container-fluid p-0">
       <!-- Env & IDE setup-->
       <section class="resume-section" id="env_setup">
         <div class="resume-section-content">
           <h3><span class="text-primary">Настройка окружения и среды разработки</span></h3>
-          <div class="subheading mb-5">Установка Git, .NET Core, Visual Studio 2019 или Visual Studio Code.</div>
+          <div class="subheading mb-5">Установка Git, .NET Core, Visual Studio 2019 или Visual Studio Code</div>
           <p class="lead mb-5">
             <a href="https://git-scm.com/downloads" target="_blank">Скачать Git с официального сайта</a>
             <br />
             Скачайте Git с официального сайта для вашей платформы и затем установите его
           </p>
-          <p class="lead mb-5">
+          <div class="lead mb-5">
             <a href="https://dotnet.microsoft.com/download/dotnet-core" target="_blank">Скачать .NET Core</a>
-            <br />
+            
             На сайте найдите <b>.NET Core 3.1 (recommended)</b> (будет выделено желтым цветом) и кликните
-            <br />
-          <p>В открывшейся странице найдите и скачайте следующие элементы</p>
-          <ul>
-            <li>SDK 3.1.402 или выше</li>
-            <li>ASP.NET Core Runtime 3.1.8 или выше</li>
-          </ul>
-          </p>
-          <br />
+            <br/>
+            В открывшейся странице найдите и скачайте следующие элементы
+            <ul>
+              <li>SDK 3.1.402 или выше</li>
+              <li>ASP.NET Core Runtime 3.1.8 или выше</li>
+            </ul>
+          </div>
           <p class="lead mb-5">
             <a href="https://visualstudio.microsoft.com/downloads/" target="_blank">Скачать Visual Studio 2019</a>
             <br />
@@ -106,11 +105,49 @@
             Интерактивный курс c заданиями (8 модулей)
           </p>
           <p class="lead mb-5">
+            <a href="https://www.youtube.com/playlist?list=PLY4rE9dstrJxYPjMqk15Vx5aBmRaHFx_Y" target="_blank">2) Основы C#</a>
+            <br />
+            Видео-курс от Eugene Popov
+          </p>
+          <p class="lead mb-5">
             <a href="https://www.youtube.com/playlist?list=PLL-k0Ff5RfqXGhAooRkUpzMLd6_Fpr13I" target="_blank">2)
               Видео-курс по языку программирования C#</a>
             <br />
             Видео-курс от Eugene Popov
           </p>
+          <div class="lead mb-5">
+            <h4><span class="text-primary">Вопросы</span></h4>
+            TODO
+            <ul>
+              <li>
+                <details>
+                  <summary class="question-title">Q1</summary>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Q2</summary>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </details>
+              </li>
+              <li>
+                <details>
+                  <summary>Q3</summary>
+                  <ul>
+                    <li></li>
+                    <li></li>
+                  </ul>
+                </details>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <hr class="m-0" />
@@ -396,6 +433,11 @@
             Довольной интересный канал, особенно советую прослушать подкаст <a href="https://soundcloud.com/mimpod">Мысли и Методы</a> либо посмотреть на <a href="https://www.youtube.com/playlist?list=PLo6puixMwuSNBQPpzujzLWON2dwPbmJt_" target="_blank">Плейлист</a>
           </p>
           <p class="lead mb-5">
+            <a href="https://www.youtube.com/user/TPMGTU" target="_blank">Технострим Mail.Ru Group</a>
+            <br />
+            ТЕХНОСТРИМ – это образовательный канал для IT специалистов. Здесь можно найти курсы по программированию такие как: БД, Java, Go, Python.
+          </p>
+          <p class="lead mb-5">
             <a href="https://www.youtube.com/user/zaemiel" target="_blank">Степан Береговой</a>
             <br />
             Степан Береговой - программист C# на платформе .NET с опытом более 15 лет. У него на канале можно найти обучающие видео, как пример это виде-курс <a href="https://www.youtube.com/playlist?list=PL9dWBtRq5J0KoaUcSmEaklxKTwGKAeU68" target="_blank">C# уроки для начинающих. С нуля!</a>
@@ -426,6 +468,23 @@
         </div>
       </section>
     </div>
+    <template id="topic-section">
+      <section class="resume-section" id="git_basics">
+        <div class="resume-section-content">
+          <h3><span id="topic-title" class="text-primary"></span></h3>
+          <div id="topic-sub-title" class="subheading mb-5"></div>
+        </div>
+      </section>
+    </template>
+    <template id="topic-resource">
+      <div class="lead mb-5">
+        <a id="topic-resource-link" href="" target="_blank"></a>
+        <br />
+      </div>
+    </template>
+    <template id="topic-divider">
+      <hr class="m-0" />
+    </template>
   </body>
 </body>
 
