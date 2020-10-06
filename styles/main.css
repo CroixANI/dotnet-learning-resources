@@ -161,14 +161,22 @@ sup {
   top: -0.5em;
 }
 
-a {
+.question-title {
   color: #bd5d38;
   text-decoration: none;
   background-color: transparent;
 }
+
+a {
+  color: #bd5d38;
+  text-decoration: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 a:hover {
   color: #824027;
   text-decoration: underline;
+  cursor: pointer;
 }
 
 a:not([href]) {
@@ -10027,7 +10035,7 @@ h1 {
   line-height: 1;
 }
 
-p.lead {
+div.lead, p.lead {
   font-size: 1.15rem;
   font-weight: 400;
 }
