@@ -61,6 +61,11 @@
           url: 'https://www.youtube.com/playlist?list=PLL-k0Ff5RfqXGhAooRkUpzMLd6_Fpr13I',
           descriptionTemplate: `Видео-курс от Eugene Popov`,
         },
+        {
+          title: 'Видео-курс "Основы С#"',
+          url: 'https://www.youtube.com/playlist?list=PL5GpkFIVRGhIBKYLSE8121gzw-rue9fB7',
+          descriptionTemplate: `Видео-курс от educo.by`,
+        },
       ]
     },
     // *************************
@@ -85,6 +90,11 @@
           title: 'Видео-курс - Базовый курс по Git',
           url: 'https://www.youtube.com/playlist?list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR',
           descriptionTemplate: `Плейлист с видео уроками по Git`,
+        },
+        {
+          title: 'Видео-курс - Git - Полный курс',
+          url: 'https://www.youtube.com/playlist?list=PLAma_mKffTOTIomJBmL9J42PP0l7riFUO',
+          descriptionTemplate: ``,
         },
         {
           title: 'Git How To на русском',
@@ -259,14 +269,31 @@
       description: 'Тестирование кода, сканирование кода на соответствие стандартам',
       resources: [
         {
-          title: 'TODO',
-          url: '#',
-          descriptionTemplate: `TODO`,
+          title: 'Зачем и как писать качественные Unit-тесты (Алексей Солодкий / Badoo)',
+          url: 'https://www.youtube.com/watch?v=Rz4S0v7K7Ho',
+          descriptionTemplate: `Алексей Солодкий расскажет об основных концепциях unit-тестирования, понимание и применение которых сделает ваши тесты стабильными, быстрыми и, главное, эффективными. К сожалению примеры на PHP.`,
         },
         {
-          title: '',
-          url: '',
+          title: 'Изучение языка программирования C# - Урок 17 - Модульные тесты',
+          url: 'https://www.youtube.com/watch?v=0ik5k01rBSA',
           descriptionTemplate: ``,
+        },
+        {
+          title: 'Видео-курс - ITVDN - Unit тестирование С#',
+          url: 'https://www.youtube.com/playlist?list=PLvItDmb0sZw-dolIJ9mSNolTvW7CnQlSG',
+          descriptionTemplate: `Введение в Unit тестирование на языке C#`,
+        },
+        {
+          title: 'Видео-курс - Unit-тестирование',
+          url: 'https://www.youtube.com/playlist?list=PLIB8be7sunXOy5TCB8V3FFClCbPOc9dvz',
+          descriptionTemplate: `<p>Unit-тесты выполняются быстро (fast).<br/>
+          Unit-тесты изолированы от каких-либо внешних зависимостей (isolated).<br/>
+          Unit-тесты легко повторяются (repeatable).</p>`,
+        },
+        {
+          title: 'Распространенные ошибки при написании юнит-тестов, Катерина Павленко',
+          url: 'https://www.youtube.com/watch?v=g5VETJqI6uc',
+          descriptionTemplate: `Все знают, что писать юнит-тесты нужно. Но иногда слишком сложно: код пишешь десять минут, а тесты все два часа. А когда дело доходит до поддержки и расширения старых тестов, иногда проще удалить их и написать всё заново. Рассмотрим частые ошибки, приводящие к этому, их причины и способы избежать.`,
         },
       ]
     },
@@ -279,34 +306,64 @@
       description: 'Источники для самостоятельного изучения алрогитмов и структур данных',
       resources: [
         {
-          title: 'TODO',
-          url: '#',
-          descriptionTemplate: `TODO`,
+          title: 'Видео-курс по Алгоритмам и структурам данных',
+          url: 'https://www.youtube.com/playlist?list=PLvItDmb0sZw8mT-wPuKNyPJBLj5tXqX83',
+          descriptionTemplate: `Данный видеокурс "Алгоритмы и структуры данных" предназначен для разработчиков, которые владеют языком С# на уровне выше среднего и желают понять, как на практике можно применить свои теоретические знания, полученные из курсов или книг.`,
         },
         {
-          title: '',
-          url: '',
+          title: 'Видео-курс - Алгоритмы и Структуры Данных (Java)',
+          url: 'https://www.youtube.com/playlist?list=PLAma_mKffTOT_qpTFv4KdD9DhOAUd5Rqy',
           descriptionTemplate: ``,
+        },
+        {
+          title: 'Оценка сложности алгоритма. Сложность алгоритмов. Big O, Большое О',
+          url: 'https://www.youtube.com/watch?v=ZRdOb4yR0kk',
+          descriptionTemplate: `Видео расскажет базовые вещи касающиеся Big O и оценки сложности алгоритмов`,
+        },
+        {
+          title: 'C# - Структуры данных',
+          url: 'https://www.youtube.com/playlist?list=PLIIXgDT0bKw4DB9toGU73ntyYIZV7aJi5',
+          descriptionTemplate: `Структуры данных (data structures) реализованные на языке программирования C# с подробным объяснением и примерами реализации в прямом эфире.`,
+        },
+        {
+          title: 'Алгоритмы C# - Алгоритмы сортировки',
+          url: 'https://www.youtube.com/playlist?list=PLIIXgDT0bKw4n6pwBjymd3wCPyQ3_SLMo',
+          descriptionTemplate: `Алгоритмы сортировки - это один из разделов большой темы в программировании - Алгоритмов. Автор рассмотрит 10 наиболее популярных реализаций алгоритмы c#.`,
         },
       ]
     },
     // *************************
-    // ======= Algorithms
+    // ======= DevOps
     // *************************
     {
       id: 'devops',
-      title: '',
-      description: '',
+      title: 'Введение в DevOps: Git, CI/CD, Ansible, Docker',
+      description: 'Непрерывная интеграция и доставка (CI/CD), развертывание и упревление конфигурацией (Ansible), контейнеризация (Docker)',
       resources: [
         {
-          title: '',
-          url: '',
-          descriptionTemplate: ``,
+          title: 'Что такое CI/CD (непрерывная интеграция и доставка)',
+          url: 'https://www.youtube.com/watch?v=7S1ndRRht6M',
+          descriptionTemplate: `Видео, 9 минут`,
         },
         {
-          title: '',
-          url: '',
-          descriptionTemplate: ``,
+          title: 'Сравнение существующих систем CI/CD',
+          url: 'https://www.youtube.com/watch?v=7SM8GLArTDY',
+          descriptionTemplate: `Видео, 15 минут`,
+        },
+        {
+          title: 'Уроки по Jenkins с нуля',
+          url: 'https://www.youtube.com/watch?v=QvlWcxECzE8&list=RDCMUCemtVTjKhD_GcEOQ_rNOrRw',
+          descriptionTemplate: `Видео уроки. Плейлист.`,
+        },
+        {
+          title: 'Ansible: быстрый старт',
+          url: 'https://www.youtube.com/watch?v=QvlWcxECzE8&list=RDCMUCemtVTjKhD_GcEOQ_rNOrRw',
+          descriptionTemplate: `Вебинар, 1 час 43 мин`,
+        },
+        {
+          title: 'Основы Docker. Большой практический выпуск',
+          url: 'https://www.youtube.com/watch?v=QF4ZF857m44',
+          descriptionTemplate: `Видео урок. 1 час 25 минут`,
         },
       ]
     },
@@ -315,18 +372,53 @@
     // *************************
     {
       id: 'youtube_channels',
-      title: '',
-      description: '',
+      title: 'YouTube каналы',
+      description: 'Каналы на которых можно подчеркнуть много интересного по программированию и работе программиста',
       resources: [
         {
-          title: '',
-          url: '',
-          descriptionTemplate: ``,
+          title: 'CS50 на русском (Гарвардский курс по основам программирования)',
+          url: 'https://www.youtube.com/playlist?list=PLawfWYMUziZqyUL5QDLVbe3j5BKWj42E5',
+          descriptionTemplate: `Великолепная вводная в computer science`,
         },
         {
-          title: '',
-          url: '',
-          descriptionTemplate: ``,
+          title: 'АйтиБорода',
+          url: 'https://www.youtube.com/channel/UCeObZv89Stb2xLtjLJ0De3Q',
+          descriptionTemplate: `Проект, посвящен не столько программированию, сколько жизни айтишников изнутри. Без всякой цензуры, ярлыков и лишнего пафоса. Весь контент на канале вместе с вами формирует цельное сообщество единомышленников, способных перевернуть этот мир ко всем чертям, в добром смысле слова :)`,
+        },
+        {
+          title: 'Soer',
+          url: 'https://www.youtube.com/c/S0ERDEVS',
+          descriptionTemplate: `На канале можно найти много познавательных видео по программированию, архитектуре и о жизни программиста. У автора есть еще второй канал <a href="https://www.youtube.com/channel/UCcNotjFXtUZ6bTAWk1KpOWg">Soer Talks</a>`,
+        },
+        {
+          title: 'Хекслет',
+          url: 'https://www.youtube.com/user/HexletUniversity',
+          descriptionTemplate: `Довольной интересный канал, особенно советую прослушать подкаст <a href="https://soundcloud.com/mimpod">Мысли и Методы</a> либо посмотреть на <a href="https://www.youtube.com/playlist?list=PLo6puixMwuSNBQPpzujzLWON2dwPbmJt_" target="_blank">Плейлист</a>`,
+        },
+        {
+          title: 'Технострим Mail.Ru Group',
+          url: 'https://www.youtube.com/user/TPMGTU',
+          descriptionTemplate: `ТЕХНОСТРИМ – это образовательный канал для IT специалистов. Здесь можно найти курсы по программированию такие как: БД, Java, Go, Python.`,
+        },
+        {
+          title: 'Степан Береговой',
+          url: 'https://www.youtube.com/user/zaemiel',
+          descriptionTemplate: `Степан Береговой - программист C# на платформе .NET с опытом более 15 лет. У него на канале можно найти обучающие видео, как пример это виде-курс <a href="https://www.youtube.com/playlist?list=PL9dWBtRq5J0KoaUcSmEaklxKTwGKAeU68" target="_blank">C# уроки для начинающих. С нуля!</a>`,
+        },
+        {
+          title: 'Флант',
+          url: 'https://www.youtube.com/channel/UCjmwHCZ-qh3ro7hHTQhqYQg',
+          descriptionTemplate: `Видео блог компании Флант. Все о Docker и Kubernetes. Очень много суперских докладов и выступлений.`,
+        },
+        {
+          title: 'ADV-IT',
+          url: 'https://www.youtube.com/channel/UC-sAMvDe7gTmBbub-rWljZg',
+          descriptionTemplate: `Всё для начинающего и опытного DevOps Инженера, а также уроки по Python.`,
+        },
+        {
+          title: 'Веб-стандарты',
+          url: 'https://www.youtube.com/channel/UCY35dlJe-V5J_IqzU-XksAg',
+          descriptionTemplate: `Веб-стандарты - YouTube канал конференции Веб-стандарты где можно найти много полезного по веб разработке и не только`,
         },
       ]
     },
