@@ -29,6 +29,10 @@
         <a class="nav-link js-scroll-trigger" href="#${topic.id}">${i+1}. ${topic.title}</a>
       </li>`));
     }
+
+    fragment.appendChild(createElementFromString(`<li class="nav-item">
+        <a class="nav-link js-scroll-trigger" href="questions.html">Примеры вопросов</a>
+      </li>`));
     
     topicsNavigationElement.appendChild(fragment);
   }
@@ -59,7 +63,7 @@
       fragment.appendChild(renderTopicResource(topicResourceTemplate, resources[i]));
     }
 
-    parent.after(fragment)
+    parent.after(fragment);
   }
 
   function renderTopic(topicTemplate, topicResourceTemplate, data) {

@@ -36,30 +36,30 @@
         </div>
       </section>
     </div>
-    <div id="topics-container" class="container-fluid p-0">
+    <div id="questions-groups-container" class="container-fluid p-0">
       
     </div>
-    <template id="topic-section">
+    <template id="question-group-section">
       <section class="resume-section" id="some_id">
         <div class="resume-section-content">
-          <h3><span id="topic-title" class="text-primary"></span></h3>
-          <div id="topic-sub-title" class="subheading mb-5"></div>
+          <h3><span id="question-group-title" class="text-primary"></span></h3>
         </div>
       </section>
     </template>
-    <template id="topic-resource">
-      <div id="topic-resource-container" class="lead mb-5">
-        <a id="topic-resource-link" href="" target="_blank"></a>
-        <br />
-      </div>
+    <template id="question-template">
+      <details>
+        <summary class="question-title"></summary>
+        <ul>
+        </ul>
+      </details>
     </template>
-    <template id="topic-divider">
+    <template id="question-group-divider">
       <hr class="m-0" />
     </template>
     <script src="js/questions-data.js"></script>
     <script src="js/questions-renderer.js"></script>
     <script>
-      window.questions.renderQuestions();
+      window.questions.renderQuestionsGroups();
     </script>
   </body>
 </body>
