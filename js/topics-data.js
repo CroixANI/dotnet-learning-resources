@@ -181,6 +181,11 @@
           url: 'https://docs.microsoft.com/ru-ru/ef/core/get-started/?tabs=netcore-cli',
           descriptionTemplate: `Две статьи с инструкциями по работе с Entity Framework (руководство и установка), на 10 минут чтения`,
         },
+        {
+          title: 'Гоша Дударь - Изучение SQL для начинающих',
+          url: 'https://www.youtube.com/playlist?list=PL0lO_mIqDDFVnLvR39VpEtphQ8bPJ-xR9',
+          descriptionTemplate: `В ходе курса вы изучите основы языка SQL. SQL - это язык запросов к базам данных. На основе SQL вы можете прописывать различные команды для работы с СУБД, такими как: MySQL, SQLite, PostSQL и многими другими.`,
+        },
       ]
     },
     // *************************
@@ -200,6 +205,11 @@
           title: 'Учебник по SOLID',
           url: 'https://ota-solid.now.sh/',
           descriptionTemplate: `Интерактивная книга по SOLID с задачами для самопроверки`,
+        },
+        {
+          title: 'webDev - Просто о SOLID (Принципы ООП)',
+          url: 'https://www.youtube.com/watch?v=A6wEkG4B38E',
+          descriptionTemplate: `В видео авто простыми словами объясняет принципы SOLID`,
         },
         {
           title: 'Microsoft Docs - Общие архитектуры веб-приложений',
