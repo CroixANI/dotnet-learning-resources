@@ -1,11 +1,16 @@
 {% set t = i18n[locale] %}
 {% if locale == "ru" %}
   {% set topicsCollection = collections.topics_ru %}
+  {% set questionsCollection = collections.questions_ru %}
   {% set langSwitchHref = "/en/" | url %}
 {% else %}
   {% set topicsCollection = collections.topics_en %}
+  {% set questionsCollection = collections.questions_en %}
   {% set langSwitchHref = "/ru/" | url %}
 {% endif %}
+
+{% set questionsUrl = ('/' + locale + '/questions/') | url %}
+{% set onQuestionsPage = page.url == questionsUrl %}
 
 <nav id="sideNav" aria-label="{{ t['nav.label'] }}">
   <div class="site-nav-header">
@@ -21,15 +26,25 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ ('/' + locale + '/') | url }}">{{ t["nav.home"] }}</a>
       </li>
-      {% for topic in topicsCollection %}
-        <li class="nav-item">
-          <a class="nav-link" href="{{ ('/' + locale + '/') | url }}#{{ topic.data.topicId }}">
-            {{ loop.index }}. {{ topic.templateContent | extractH1Text }}
-          </a>
-        </li>
-      {% endfor %}
+      {% if onQuestionsPage %}
+        {% for group in questionsCollection %}
+          <li class="nav-item">
+            <a class="nav-link" href="#{{ group.data.topicId }}">
+              {{ loop.index }}. {{ group.templateContent | extractH1Text }}
+            </a>
+          </li>
+        {% endfor %}
+      {% else %}
+        {% for topic in topicsCollection %}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ ('/' + locale + '/') | url }}#{{ topic.data.topicId }}">
+              {{ loop.index }}. {{ topic.templateContent | extractH1Text }}
+            </a>
+          </li>
+        {% endfor %}
+      {% endif %}
       <li class="nav-item">
-        <a class="nav-link" href="{{ ('/' + locale + '/questions/') | url }}">{{ t["nav.questions"] }}</a>
+        <a class="nav-link" href="{{ questionsUrl }}">{{ t["nav.questions"] }}</a>
       </li>
     </ul>
 
