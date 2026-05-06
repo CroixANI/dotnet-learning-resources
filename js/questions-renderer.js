@@ -5,7 +5,7 @@
     var QUESTION_TEMPLATE_SELECTOR = '#question-template';
     var DIVIDER_TEMPLATE_SELECTOR = '#question-group-divider';
     var TOPIC_SECTION_SELECTOR = '.resume-section';
-    var QUESTIONS_GROUP_TITLE_SELECTOR = '#question-group-title';
+    var QUESTIONS_GROUP_TITLE_SELECTOR = '.question-group-title';
 
     var topicsNavigationElement = document.querySelector(NAVIGATION_SELECTOR);
     var topicsContainerElement = document.querySelector(QUESTIONS_GROUPS_CONTAINER_SELECTOR);

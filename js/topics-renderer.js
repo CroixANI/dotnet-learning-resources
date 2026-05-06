@@ -5,9 +5,9 @@
   var TOPIC_RESOURCE_TEMPLATE_SELECTOR = '#topic-resource';
   var TOPIC_DIVIDER_TEMPLATE_SELECTOR = '#topic-divider';
   var TOPIC_SECTION_SELECTOR = '.resume-section';
-  var TOPIC_TITLE_SELECTOR = '#topic-title';
-  var TOPIC_SUB_TITLE_SELECTOR = '#topic-sub-title';
-  var TOPIC_RESOURCE_LINK_SELECTOR = '#topic-resource-link';
+  var TOPIC_TITLE_SELECTOR = '.topic-title';
+  var TOPIC_SUB_TITLE_SELECTOR = '.topic-sub-title';
+  var TOPIC_RESOURCE_LINK_SELECTOR = '.topic-resource-link';
 
   var topicsNavigationElement = document.querySelector(TOPICS_NAVIGATION_SELECTOR);
   var topicsContainerElement = document.querySelector(TOPICS_CONTAINER_SELECTOR);
@@ -38,7 +38,7 @@
   }
 
   function renderTopicResource(topicResourceTemplate, resource) {
-    var resourceElement = topicResourceTemplate.cloneNode(true).querySelector('#topic-resource-container');
+    var resourceElement = topicResourceTemplate.cloneNode(true).querySelector('.topic-resource-container');
     var link = resourceElement.querySelector(TOPIC_RESOURCE_LINK_SELECTOR);
     if (!resource.url) {
       resourceElement.removeChild(link);
