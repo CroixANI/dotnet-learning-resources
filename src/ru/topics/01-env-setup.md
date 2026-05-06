@@ -10,11 +10,11 @@ order: 1
 - [Скачать Git с официального сайта](https://git-scm.com/downloads/)  
   Скачайте Git с официального сайта для вашей платформы и затем установите его.
 
-- [Скачать .NET Core](https://dotnet.microsoft.com/download/dotnet-core)  
-  На сайте найдите **.NET Core 3.1 (recommended)** (будет выделено желтым цветом) и кликните.
+- [Скачать .NET 10](https://dotnet.microsoft.com/en-us/download/dotnet)  
+  На сайте найдите **.NET 10 (recommended)** (будет выделено желтым цветом) и кликните.
   В открывшейся странице найдите и скачайте следующие элементы:
-  - SDK 3.1.402 или выше
-  - ASP.NET Core Runtime 3.1.8 или выше
+  - SDK 10.0.203 или выше
+  - ASP.NET Core Runtime 10.0.7 или выше
 
 - [Скачать Visual Studio 2019](https://visualstudio.microsoft.com/downloads/)  
   Выбрать Community версию (она бесплатная), скачать и затем установить.
