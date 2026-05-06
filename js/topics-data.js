@@ -94,7 +94,7 @@
         {
           title: 'Видео-курс - Git - Полный курс',
           url: 'https://www.youtube.com/playlist?list=PLAma_mKffTOTIomJBmL9J42PP0l7riFUO',
-          descriptionTemplate: ``,
+          descriptionTemplate: `Подробный видеокурс по Git от основ до продвинутых тем`,
         },
         {
           title: 'Git How To на русском',
@@ -132,7 +132,7 @@
           descriptionTemplate: `В статье рассказывается в упрощенной форме, что происходит когда мы вводим URL в браузер и нам отображается страница`,
         },
         {
-          title: 'Видео - Lofblog - HTML для начинающих',
+          title: 'Видео - Loftblog - HTML для начинающих',
           url: 'https://www.youtube.com/playlist?list=PLY4rE9dstrJyeZlPWoKJr1xKVVnG4w-Hc',
           descriptionTemplate: `Видео-курс курс по основам HTML`,
         },
@@ -209,7 +209,7 @@
         {
           title: 'webDev - Просто о SOLID (Принципы ООП)',
           url: 'https://www.youtube.com/watch?v=A6wEkG4B38E',
-          descriptionTemplate: `В видео авто простыми словами объясняет принципы SOLID`,
+          descriptionTemplate: `В видео автор простыми словами объясняет принципы SOLID`,
         },
         {
           title: 'Microsoft Docs - Общие архитектуры веб-приложений',
@@ -217,9 +217,9 @@
           descriptionTemplate: `Введение в архитектуру веб приложений со схемами и структурой кода`,
         },
         {
-          title: 'Yandex Zen - Шаблоны архитектуры ПО: Многоуровневая архитектура',
-          url: 'https://zen.yandex.ru/media/id/59a3c8f3e86a9e427324fb73/shablony-arhitektury-po-mnogourovnevaia-arhitektura-59e872653dceb74d0aabc0ff',
-          descriptionTemplate: `Вводная в N-Layered архитектуру, которая будет применяться для создания тестового ASP.NET MVC Core приложения`,
+          title: 'Microsoft Docs - Традиционная N-уровневая архитектура',
+          url: 'https://learn.microsoft.com/ru-ru/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures#traditional-n-layer-architecture-applications',
+          descriptionTemplate: `Описание N-Layered архитектуры — подход, который будет применяться при создании тестового ASP.NET Core приложения`,
         },
         {
           title: 'Хабр - IoC, DI, IoC-контейнер — Просто о простом',
@@ -286,7 +286,7 @@
         {
           title: 'Изучение языка программирования C# - Урок 17 - Модульные тесты',
           url: 'https://www.youtube.com/watch?v=0ik5k01rBSA',
-          descriptionTemplate: ``,
+          descriptionTemplate: `Видеоурок по написанию модульных тестов на C#`,
         },
         {
           title: 'Видео-курс - ITVDN - Unit тестирование С#',
@@ -313,17 +313,17 @@
     {
       id: 'algorithms',
       title: 'Алгоритмы и структуры данных',
-      description: 'Источники для самостоятельного изучения алрогитмов и структур данных',
+      description: 'Базовые алгоритмы и структуры данных — важная часть подготовки к техническому собеседованию',
       resources: [
         {
           title: 'Видео-курс по Алгоритмам и структурам данных',
           url: 'https://www.youtube.com/playlist?list=PLvItDmb0sZw8mT-wPuKNyPJBLj5tXqX83',
-          descriptionTemplate: `Данный видеокурс "Алгоритмы и структуры данных" предназначен для разработчиков, которые владеют языком С# на уровне выше среднего и желают понять, как на практике можно применить свои теоретические знания, полученные из курсов или книг.`,
+          descriptionTemplate: `Видеокурс по алгоритмам и структурам данных с примерами на C#. Разбирается как применять теоретические знания на практике.`,
         },
         {
           title: 'Видео-курс - Алгоритмы и Структуры Данных (Java)',
           url: 'https://www.youtube.com/playlist?list=PLAma_mKffTOT_qpTFv4KdD9DhOAUd5Rqy',
-          descriptionTemplate: ``,
+          descriptionTemplate: `Курс на Java, но концепции алгоритмов универсальны — подходит для изучения независимо от языка`,
         },
         {
           title: 'Оценка сложности алгоритма. Сложность алгоритмов. Big O, Большое О',
@@ -348,7 +348,7 @@
     {
       id: 'devops',
       title: 'Введение в DevOps: Git, CI/CD, Ansible, Docker',
-      description: 'Непрерывная интеграция и доставка (CI/CD), развертывание и упревление конфигурацией (Ansible), контейнеризация (Docker)',
+      description: 'Непрерывная интеграция и доставка (CI/CD), развертывание и управление конфигурацией (Ansible), контейнеризация (Docker)',
       resources: [
         {
           title: 'Что такое CI/CD (непрерывная интеграция и доставка)',
@@ -366,9 +366,9 @@
           descriptionTemplate: `Видео уроки. Плейлист.`,
         },
         {
-          title: 'Ansible: быстрый старт',
-          url: 'https://www.youtube.com/watch?v=QvlWcxECzE8&list=RDCMUCemtVTjKhD_GcEOQ_rNOrRw',
-          descriptionTemplate: `Вебинар, 1 час 43 мин`,
+          title: 'Ansible: официальное руководство для начинающих',
+          url: 'https://docs.ansible.com/ansible/latest/getting_started/index.html',
+          descriptionTemplate: `Официальное руководство по началу работы с Ansible`,
         },
         {
           title: 'Основы Docker. Большой практический выпуск',
@@ -383,7 +383,7 @@
     {
       id: 'youtube_channels',
       title: 'YouTube каналы',
-      description: 'Каналы на которых можно подчеркнуть много интересного по программированию и работе программиста',
+      description: 'Каналы на которых можно почерпнуть много интересного по программированию и работе программиста',
       resources: [
         {
           title: 'CS50 на русском (Гарвардский курс по основам программирования)',
