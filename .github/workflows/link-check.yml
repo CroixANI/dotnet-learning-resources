@@ -20,4 +20,3 @@ jobs:
 
       - name: Check links
         run: node scripts/check-links.mjs --no-semantic
-        continue-on-error: true
