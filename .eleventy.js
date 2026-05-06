@@ -17,6 +17,18 @@ module.exports = function (eleventyConfig) {
     return match ? match[1].replace(/<[^>]+>/g, "").trim() : "";
   });
 
+  // Transform question Markdown HTML into <details>/<summary> accordions.
+  // Strips the <h1> (rendered separately) and wraps each <h2> + following
+  // content into a <details> block.
+  eleventyConfig.addFilter("questionsHtml", (html) => {
+    if (!html) return "";
+    const noH1 = html.replace(/<h1[^>]*>[\s\S]*?<\/h1>/, "");
+    return noH1.replace(
+      /<h2[^>]*>([\s\S]*?)<\/h2>([\s\S]*?)(?=<h2|$)/g,
+      (_, title, body) => `<details><summary>${title}</summary>\n${body.trim()}\n</details>\n`
+    );
+  });
+
   // Sorted, locale-filtered collections
   const byOrder = (a, b) => (a.data.order ?? 0) - (b.data.order ?? 0);
 

@@ -18,23 +18,12 @@ description: "Примеры вопросов на собеседование п
   <hr>
   <section class="resume-section" id="{{ group.data.topicId }}" aria-labelledby="heading-{{ group.data.topicId }}">
     <div class="resume-section-content">
-      {{ group.templateContent | addH1Id("heading-" + group.data.topicId) | safe }}
-
-      {% for question in group.data.questions %}
-        <details>
-          <summary>{{ question.title }}</summary>
-          {% if question.hint %}
-            <p class="question-hint">{{ question.hint }}</p>
-          {% endif %}
-          <ul>
-            {% for link in question.links %}
-              <li>
-                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </details>
-      {% endfor %}
+      <h2 id="heading-{{ group.data.topicId }}" class="text-primary">
+        {{ group.templateContent | extractH1Text }}
+      </h2>
+      <div class="questions-body">
+        {{ group.templateContent | questionsHtml | safe }}
+      </div>
     </div>
   </section>
 {% endfor %}
