@@ -43,7 +43,7 @@
                     ]
                 },
                 {
-                    title: 'Что такое рекурсия или напишите функцию вычисляющую числа Фиббоначчи с использование рекурсии?',
+                    title: 'Что такое рекурсия или напишите функцию вычисляющую числа Фибоначчи с использованием рекурсии?',
                     links: [
                         {
                             title: 'Статья - Metanit - C# Рекурсивные функции',
@@ -127,9 +127,11 @@
                 {
                     title: 'Какие бывают сборки по типу развертывания (local, GAC)?',
                     links: [
-
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Microsoft Docs - Global Assembly Cache',
+                            url: 'https://learn.microsoft.com/ru-ru/dotnet/framework/app-domains/gac',
+                        }
+                    ]
                 },
                 {
                     title: 'Что такое домен приложения и процесс в среде .NET?',
@@ -259,9 +261,11 @@
                 {
                     title: 'Можно ли указать модификатор доступа к методам и свойствам интерфейса?',
                     links: [
-
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Microsoft Docs - Интерфейсы (C#)',
+                            url: 'https://learn.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/interface',
+                        }
+                    ]
                 },
                 {
                     title: 'Расскажите, как работает try, catch, finally? Когда вызывается каждый?',
@@ -346,8 +350,8 @@
                     title: 'Что такое методы расширения и для чего они нужны?',
                     links: [
                         {
-                            title: '',
-                            url: '',
+                            title: 'Статья - Metanit - Методы расширения',
+                            url: 'https://metanit.com/sharp/tutorial/3.24.php',
                         }
                     ]
                 },
@@ -355,8 +359,8 @@
                     title: 'Когда вызывается статический конструктор объекта?',
                     links: [
                         {
-                            title: '',
-                            url: '',
+                            title: 'Статья - Metanit - Статические конструкторы',
+                            url: 'https://metanit.com/sharp/tutorial/3.5.php',
                         }
                     ]
                 },
@@ -364,8 +368,8 @@
                     title: 'В чем отличие класса string от класса StringBuilder?',
                     links: [
                         {
-                            title: '',
-                            url: '',
+                            title: 'Статья - Metanit - Класс StringBuilder',
+                            url: 'https://metanit.com/sharp/tutorial/7.6.php',
                         }
                     ]
                 },
@@ -373,8 +377,8 @@
                     title: 'Возможно ли множественное наследование в C#?',
                     links: [
                         {
-                            title: '',
-                            url: '',
+                            title: 'Статья - Metanit - Интерфейсы и множественное наследование',
+                            url: 'https://metanit.com/sharp/tutorial/3.11.php',
                         }
                     ]
                 }
@@ -414,7 +418,7 @@
                     title: 'Что такое SOAP?',
                     links: [
                         {
-                            title: 'Статья - Хибр - Различия REST и SOAP',
+                            title: 'Статья - Хабр - Различия REST и SOAP',
                             url: 'https://habr.com/ru/post/483204/',
                         },
                         {
@@ -446,28 +450,44 @@
                     ]
                 },
                 {
-                    title: 'Что такое HttpFilter, HttpHanlder? Как они используются? Когда отрабатывают?',
+                    title: 'Что такое HttpFilter, HttpHandler? Как они используются? Когда отрабатывают? Что им соответствует в ASP.NET Core?',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Microsoft Docs - HTTP-обработчики и модули HTTP (классический ASP.NET)',
+                            url: 'https://learn.microsoft.com/ru-ru/aspnet/core/migration/http-modules',
+                        },
+                        {
+                            title: 'Статья - Microsoft Docs - Фильтры в ASP.NET Core',
+                            url: 'https://learn.microsoft.com/ru-ru/aspnet/core/mvc/controllers/filters',
+                        }
+                    ]
                 },
                 {
                     title: 'Что такое ModelBinder? Как он работает? Можно ли переопределить его поведение?',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Microsoft Docs - Привязка модели в ASP.NET Core',
+                            url: 'https://learn.microsoft.com/ru-ru/aspnet/core/mvc/models/model-binding',
+                        }
+                    ]
                 },
                 {
-                    title: 'Как работают маршруты (route) в ASP.NET MVC?',
+                    title: 'Как работают маршруты (route) в ASP.NET Core?',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Microsoft Docs - Маршрутизация в ASP.NET Core',
+                            url: 'https://learn.microsoft.com/ru-ru/aspnet/core/fundamentals/routing',
+                        }
+                    ]
                 },
                 {
-                    title: 'Что такое Middleware в ASP.NET MVC Core?',
+                    title: 'Что такое Middleware в ASP.NET Core?',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Microsoft Docs - ПО промежуточного слоя (Middleware) в ASP.NET Core',
+                            url: 'https://learn.microsoft.com/ru-ru/aspnet/core/fundamentals/middleware/',
+                        }
+                    ]
                 }
             ]
         },
@@ -512,7 +532,7 @@
                     title: 'Что такое замыкание?',
                     links: [
                         {
-                            title: 'Статья - Fontend Stuff - Введение в замыкание',
+                            title: 'Статья - Frontend Stuff - Введение в замыкание',
                             url: 'https://frontend-stuff.com/blog/closures/',
                         },
                         {
@@ -585,56 +605,83 @@
                 {
                     title: 'Типы БД (обычно реляционные/нереляционные, различия между ними)',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Хабр - Реляционные и нереляционные базы данных',
+                            url: 'https://habr.com/ru/articles/480278/',
+                        }
+                    ]
                 },
                 {
                     title: 'SQL vs NoSql vs NewSql',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Хабр - SQL vs NoSQL',
+                            url: 'https://habr.com/ru/articles/441950/',
+                        }
+                    ]
                 },
                 {
                     title: 'Какие бывают объекты в БД? Что такое триггер?',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Metanit - Триггеры в SQL Server',
+                            url: 'https://metanit.com/sql/sqlserver/10.1.php',
+                        }
+                    ]
                 },
                 {
                     title: 'Что такое индексы? Зачем нужны индексы?',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Хабр - Индексы в базах данных',
+                            url: 'https://habr.com/ru/articles/247373/',
+                        }
+                    ]
                 },
                 {
                     title: 'Что такое первичный/внешний ключи? Зачем нужны?',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Metanit - Первичный и внешний ключи в SQL',
+                            url: 'https://metanit.com/sql/sqlserver/4.5.php',
+                        }
+                    ]
                 },
                 {
                     title: 'Хранимые процедуры/функции в чём разница?',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Metanit - Хранимые процедуры в SQL Server',
+                            url: 'https://metanit.com/sql/sqlserver/10.2.php',
+                        }
+                    ]
                 },
                 {
                     title: 'Что такое план оптимизации?',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Хабр - Планы выполнения запросов в SQL Server',
+                            url: 'https://habr.com/ru/articles/203064/',
+                        }
+                    ]
                 },
                 {
                     title: 'Что такое Join, зачем нужен, какие типы бывают и в чём разница между ними?',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Metanit - Объединение таблиц (JOIN)',
+                            url: 'https://metanit.com/sql/sqlserver/4.2.php',
+                        }
+                    ]
                 },
                 {
                     title: 'Что такое view в SQL БД? Зачем нужны, чем отличаются от таблиц?',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Metanit - Представления (Views) в SQL Server',
+                            url: 'https://metanit.com/sql/sqlserver/10.3.php',
+                        }
+                    ]
                 }
             ]
         },
@@ -721,8 +768,11 @@
                 {
                     title: 'Что знаете про Service Mesh',
                     links: [
-                    ],
-                    draft: true
+                        {
+                            title: 'Статья - Хабр - Что такое Service Mesh и зачем он нужен',
+                            url: 'https://habr.com/ru/articles/471982/',
+                        }
+                    ]
                 }
             ]
         },
