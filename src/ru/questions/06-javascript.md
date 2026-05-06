@@ -7,7 +7,7 @@ order: 6
 
 ## JavaScript однопоточный язык?
 > JavaScript сам по себе не является ни однопоточным, ни многопоточным. Всё зависит от реализации. Браузерная реализация JavaScript действительно является однопоточной.
-* [Форум — Почему javascript не многопоточный?](https://forum.vingrad.ru/forum/topic-250616/0.html)
+* [Habr — JavaScript однопоточный или многопоточный? Ставим точку](https://habr.com/ru/articles/786330/)
 
 ## Что значит hoisting?
 * [Статья — MDN — Поднятие](https://developer.mozilla.org/ru/docs/Glossary/Hoisting)
@@ -29,7 +29,7 @@ order: 6
 
 ## JavaScript объектно ориентированный язык?
 * [Статья — TProger — Фундаментальные принципы объектно-ориентированного программирования на JavaScript](https://tproger.ru/translations/oop-js-fundamentals)
-* [Статья — MDN — Вступление в Объектно-ориентированный JavaScript](https://developer.mozilla.org/ru/docs/Web/JavaScript/Introduction_to_Object-Oriented_JavaScript)
+* [Статья — MDN — Введение в объекты JavaScript - Изучение веб-разработки](https://developer.mozilla.org/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
 
 ## Что такое Immediately Invoked Function?
 * [Статья — MDN — IIFE](https://developer.mozilla.org/ru/docs/Glossary/IIFE)

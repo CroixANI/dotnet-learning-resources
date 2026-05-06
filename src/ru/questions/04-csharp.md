@@ -29,7 +29,7 @@ order: 4
 * [Статья — Metanit — C# Классы и объекты](https://metanit.com/sharp/tutorial/3.1.php)
 
 ## Чем отличается readonly, static и const?
-* [Статья — Dev Nuances — Разница между константами и полями только для чтения в C#](http://devnuances.com/c_sharp/raznitsa-mezhdu-konstantami-i-polyami-tolko-dlya-chteniya-v-c_sharp/)
+* [Статья — Dev Nuances — Константы, поля и структуры для чтения](https://metanit.com/sharp/tutorial/3.3.php)
 
 ## Чем отличается interface от abstract class?
 * [Статья — Metanit — Интерфейсы или абстрактные классы](https://metanit.com/sharp/patterns/1.3.php)
@@ -39,7 +39,7 @@ order: 4
 * [Статья — Microsoft Docs — Интерфейсы (C#)](https://learn.microsoft.com/ru-ru/dotnet/csharp/language-reference/keywords/interface)
 
 ## Расскажите, как работает try, catch, finally? Когда вызывается каждый?
-* [Статья — Вопросы на собеседовании C#](https://bool.dev/blog/detail/voprosy-na-sobesedovanii-po-c)
+* [Статья — Вопросы на собеседовании по C#](https://bool.dev/blog/detail/voprosy-na-sobesedovanii-po-c)
 
 ## Что такое LINQ?
 * [Статья — Metanit — Основы LINQ](https://metanit.com/sharp/tutorial/15.1.php)
@@ -50,7 +50,7 @@ order: 4
 ## Что такое делегат и что такое события и связаны ли они?
 * [Статья — Metanit — Делегаты](https://metanit.com/sharp/tutorial/3.13.php)
 * [Статья — Metanit — События](https://metanit.com/sharp/tutorial/3.14.php)
-* [Статья — Вопросы на собеседовании C#](https://bool.dev/blog/detail/voprosy-na-sobesedovanii-po-c)
+* [Статья — Вопросы на собеседовании по C#](https://bool.dev/blog/detail/voprosy-na-sobesedovanii-po-c)
 
 ## Чем отличается поток и процесс?
 * [Статья — TProger — В чем разница между потоком и процессом?](https://tproger.ru/problems/what-is-the-difference-between-threads-and-processes)
@@ -64,7 +64,7 @@ order: 4
 * [Статья — Metanit — Асинхронные методы, async, await](https://metanit.com/sharp/questions/3.1.php)
 
 ## Что такое методы расширения и для чего они нужны?
-* [Статья — Metanit — Методы расширения](https://metanit.com/sharp/tutorial/3.24.php)
+* [Статья — Metanit — Расширения типов](https://metanit.com/sharp/tutorial/3.18.php)
 
 ## Когда вызывается статический конструктор объекта?
 * [Статья — Metanit — Статические конструкторы](https://metanit.com/sharp/tutorial/3.6.php)
