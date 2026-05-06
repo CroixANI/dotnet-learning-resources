@@ -66,7 +66,13 @@ function makeController() {
   return { signal: ctrl.signal, cancel: () => clearTimeout(timer) };
 }
 
-const USER_AGENT = 'Mozilla/5.0 (compatible; link-checker/1.0)';
+const USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
+
+const HEADERS = {
+  'User-Agent': USER_AGENT,
+  'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+  'Accept-Language': 'en-US,en;q=0.9,ru;q=0.8',
+};
 
 async function followRedirects(originalUrl, maxHops = 8) {
   let url = originalUrl;
@@ -79,7 +85,7 @@ async function followRedirects(originalUrl, maxHops = 8) {
         method: 'HEAD',
         redirect: 'manual',
         signal,
-        headers: { 'User-Agent': USER_AGENT },
+        headers: HEADERS,
       });
       // Some servers block HEAD requests with 405 or 403
       if (res.status === 405 || res.status === 403) {
@@ -93,7 +99,7 @@ async function followRedirects(originalUrl, maxHops = 8) {
           method: 'GET',
           redirect: 'manual',
           signal: ctrl2.signal,
-          headers: { 'User-Agent': USER_AGENT },
+          headers: HEADERS,
         });
         ctrl2.cancel();
       } catch (err) {
@@ -123,7 +129,7 @@ async function fetchPageTitle(url) {
     const res = await fetch(url, {
       method: 'GET',
       signal,
-      headers: { 'User-Agent': USER_AGENT },
+      headers: HEADERS,
     });
     cancel();
     if (!res.ok) return null;

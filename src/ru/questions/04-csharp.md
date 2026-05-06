@@ -23,7 +23,7 @@ order: 4
 
 ## В чем отличие использования Finalize и Dispose?
 * [Статья — Metanit — Финализируемые объекты](https://metanit.com/sharp/tutorial/8.2.php)
-* [Ответ — Stackoverflow](https://ru.stackoverflow.com/questions/500438/%d0%a0%d0%b0%d0%b7%d0%bb%d0%b8%d1%87%d0%b8%d0%b5-dispose-finalize-%d0%94%d0%b5%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d0%be%d1%80%d0%b0-%d0%b8-%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d0%b0-gc)
+* [Статья — Habr — Dispose и Finalize](https://habr.com/ru/articles/265321/)
 
 ## В чем отличие между классом и объектом?
 * [Статья — Metanit — C# Классы и объекты](https://metanit.com/sharp/tutorial/3.1.php)
