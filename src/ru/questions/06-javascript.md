@@ -12,7 +12,7 @@ order: 6
 ## Что значит hoisting?
 * [Статья — MDN — Поднятие](https://developer.mozilla.org/ru/docs/Glossary/Hoisting)
 * [Статья — Frontend Stuff — Поднятие или hoisting в JavaScript](https://frontend-stuff.com/blog/hoisting/)
-* [Статья — Medium — Разбираемся с "поднятием" (hoisting) в JavaScript](https://medium.com/@stasonmars/%D1%80%D0%B0%D0%B7%D0%B1%D0%B8%D1%80%D0%B0%D0%B5%D0%BC%D1%81%D1%8F-%D1%81-%D0%BF%D0%BE%D0%B4%D0%BD%D1%8F%D1%82%D0%B8%D0%B5%D0%BC-hoisting-%D0%B2-javascript-7d2d27bc51f1)
+* [Статья — Metanit — Hoisting](https://metanit.com/web/javascript/3.6.php)
 
 ## Что такое замыкание?
 * [Статья — Frontend Stuff — Введение в замыкание](https://frontend-stuff.com/blog/closures/)
