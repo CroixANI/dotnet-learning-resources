@@ -9,8 +9,9 @@
   {% set langSwitchHref = "/ru/" | url %}
 {% endif %}
 
-{% set questionsUrl = ('/' + locale + '/questions/') | url %}
-{% set onQuestionsPage = page.url == questionsUrl %}
+{% set questionsPath = '/' + locale + '/questions/' %}
+{% set questionsUrl = questionsPath | url %}
+{% set onQuestionsPage = page.url == questionsPath %}
 
 <nav id="sideNav" aria-label="{{ t['nav.label'] }}">
   <div class="site-nav-header">
