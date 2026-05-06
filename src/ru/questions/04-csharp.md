@@ -70,7 +70,7 @@ order: 4
 * [Статья — Metanit — Статические конструкторы](https://metanit.com/sharp/tutorial/3.6.php)
 
 ## В чем отличие класса string от класса StringBuilder?
-* [Статья — Metanit — Класс StringBuilder](https://metanit.com/sharp/tutorial/7.6.php)
+* [Статья — Metanit — Класс StringBuilder](https://metanit.com/sharp/tutorial/7.3.php)
 
 ## Возможно ли множественное наследование в C#?
 * [Статья — Metanit — Интерфейсы и множественное наследование](https://metanit.com/sharp/tutorial/3.48.php)
