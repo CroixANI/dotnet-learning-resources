@@ -177,9 +177,18 @@ function stripNoiseParams(url) {
   }
 }
 
+// Links often follow "Type — Source — Actual title" convention.
+// Extract just the last segment for comparison so "Статья — MDN — Замыкания"
+// is compared as "Замыкания" against the page title.
+function extractLinkTitle(text) {
+  const parts = text.split(' — ');
+  return parts.length > 1 ? parts[parts.length - 1].trim() : text;
+}
+
 function semanticScore(linkText, pageTitle) {
   if (isBareUrl(linkText) || !pageTitle) return 1; // skip
-  const textWords = new Set(normalizeWords(linkText));
+  const title = extractLinkTitle(linkText);
+  const textWords = new Set(normalizeWords(title));
   const titleWords = new Set(normalizeWords(pageTitle));
   if (textWords.size === 0) return 1;
   let overlap = 0;
