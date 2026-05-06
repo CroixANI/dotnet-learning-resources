@@ -81,6 +81,10 @@ async function followRedirects(originalUrl, maxHops = 8) {
         signal,
         headers: { 'User-Agent': USER_AGENT },
       });
+      // Some servers block HEAD requests with 405 or 403
+      if (res.status === 405 || res.status === 403) {
+        throw new Error('HEAD not allowed');
+      }
     } catch {
       // GET fallback
       try {
