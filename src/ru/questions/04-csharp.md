@@ -23,7 +23,7 @@ order: 4
 
 ## В чем отличие использования Finalize и Dispose?
 * [Статья — Metanit — Финализируемые объекты](https://metanit.com/sharp/tutorial/8.2.php)
-* [Ответ — Stackoverflow](https://ru.stackoverflow.com/questions/500438/)
+* [Ответ — Stackoverflow](https://ru.stackoverflow.com/questions/500438/%d0%a0%d0%b0%d0%b7%d0%bb%d0%b8%d1%87%d0%b8%d0%b5-dispose-finalize-%d0%94%d0%b5%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d0%be%d1%80%d0%b0-%d0%b8-%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d0%b0-gc)
 
 ## В чем отличие между классом и объектом?
 * [Статья — Metanit — C# Классы и объекты](https://metanit.com/sharp/tutorial/3.1.php)
@@ -57,7 +57,7 @@ order: 4
 
 ## Чем многопоточное программирование отличается от асинхронного?
 * [Статья — Хабр — Параллелизм против многопоточности против асинхронного программирования](https://habr.com/ru/articles/337528/)
-* [Статья — В чем разница между асинхронным программированием и многопоточностью?](https://overcoder.net/q/21072/)
+* [Статья — В чем разница между асинхронным программированием и многопоточностью?](https://habr.com/ru/companies/k2tech/articles/953080/)
 * [Видео — Диджитализируй! — Многопроцессность, многопоточность, асинхронность](https://www.youtube.com/watch?v=JIp14T9bvvc)
 
 ## Что такое async и await?
@@ -67,7 +67,7 @@ order: 4
 * [Статья — Metanit — Методы расширения](https://metanit.com/sharp/tutorial/3.24.php)
 
 ## Когда вызывается статический конструктор объекта?
-* [Статья — Metanit — Статические конструкторы](https://metanit.com/sharp/tutorial/3.5.php)
+* [Статья — Metanit — Статические конструкторы](https://metanit.com/sharp/tutorial/3.6.php)
 
 ## В чем отличие класса string от класса StringBuilder?
 * [Статья — Metanit — Класс StringBuilder](https://metanit.com/sharp/tutorial/7.6.php)

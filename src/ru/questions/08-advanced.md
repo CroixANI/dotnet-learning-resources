@@ -7,7 +7,7 @@ order: 8
 
 ## Что такое IoC (Inversion of Control / инверсия управления) и для чего она нужна?
 * [Статья — Medium — DI (inversion) vs DI(injection) vs IOC vs DI/IOC containers](https://pkolmakov.medium.com/di-inversoin-vs-di-injection-vs-ioc-vs-di-ioc-containers-83e925515ec)
-* [Статья — Shwanoff — Инверсия управления и Внедрение зависимостей (IoС & DI)](https://shwanoff.ru/ioc-and-di/)
+* [Статья — Инверсия управления и Внедрение зависимостей (IoС & DI)](https://youngjunior.ru/csharp/interviews/64)
 * [Статья — Хабр — IoC, DI, IoC-контейнер — Просто о простом](https://habr.com/ru/articles/131993/)
 * [Статья — Sergey Teplyakov — DI vs. DIP vs. IoC](http://sergeyteplyakov.blogspot.com/2014/11/di-vs-dip-vs-ioc.html)
 * [Статья — Alex Kosarev — Инверсия управления: внедрение и поиск зависимостей](https://alexkosarev.name/2019/06/20/ioc-di-and-dl/)
