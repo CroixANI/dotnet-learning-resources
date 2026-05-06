@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+permalink: /en/
+pageTitle: "page.title.topics"
+description: ".NET learning resources from scratch: structured topics with links to courses, articles and videos."
+---
+{% set t = i18n[locale] %}
+
+<section class="resume-section" id="main" aria-labelledby="heading-main">
+  <div class="resume-section-content">
+    <h1 id="heading-main" class="text-primary">{{ t["topics.title"] }}</h1>
+    <p class="subheading mb-4">{{ t["topics.intro.p1"] }}</p>
+    <p class="subheading mb-4">{{ t["topics.intro.p2"] }}</p>
+    <p class="subheading mb-4">{{ t["topics.intro.p3"] }}</p>
+    <p class="subheading mb-4">{{ t["topics.intro.p4"] }}</p>
+    <p class="subheading mb-4">
+      <a href="{{ '/ru/' | url }}">Перейти к русской версии →</a>
+    </p>
+  </div>
+</section>

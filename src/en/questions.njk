@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+permalink: /en/questions/
+pageTitle: "page.title.questions"
+description: "Sample interview questions on .NET, C#, ASP.NET Core, SQL and design patterns."
+---
+{% set t = i18n[locale] %}
+
+<section class="resume-section" id="main" aria-labelledby="heading-main">
+  <div class="resume-section-content">
+    <h1 id="heading-main" class="text-primary">{{ t["questions.title"] }}</h1>
+    <p class="subheading mb-4">{{ t["questions.intro.p1"] }}</p>
+    <p class="subheading mb-4">{{ t["questions.intro.p2"] }}</p>
+    <p class="subheading mb-4">
+      <a href="{{ '/ru/questions/' | url }}">Перейти к русской версии →</a>
+    </p>
+  </div>
+</section>

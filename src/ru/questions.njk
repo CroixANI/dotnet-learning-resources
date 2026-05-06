@@ -1,0 +1,40 @@
+---
+layout: layouts/base.njk
+permalink: /ru/questions/
+pageTitle: "page.title.questions"
+description: "Примеры вопросов на собеседование по .NET, C#, ASP.NET Core, SQL и паттернам проектирования."
+---
+{% set t = i18n[locale] %}
+
+<section class="resume-section" id="main" aria-labelledby="heading-main">
+  <div class="resume-section-content">
+    <h1 id="heading-main" class="text-primary">{{ t["questions.title"] }}</h1>
+    <p class="subheading mb-4">{{ t["questions.intro.p1"] }}</p>
+    <p class="subheading mb-4">{{ t["questions.intro.p2"] }}</p>
+  </div>
+</section>
+
+{% for group in collections.questions_ru %}
+  <hr>
+  <section class="resume-section" id="{{ group.data.topicId }}" aria-labelledby="heading-{{ group.data.topicId }}">
+    <div class="resume-section-content">
+      {{ group.templateContent | addH1Id("heading-" + group.data.topicId) | safe }}
+
+      {% for question in group.data.questions %}
+        <details>
+          <summary>{{ question.title }}</summary>
+          {% if question.hint %}
+            <p class="question-hint">{{ question.hint }}</p>
+          {% endif %}
+          <ul>
+            {% for link in question.links %}
+              <li>
+                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </details>
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}
