@@ -42,7 +42,7 @@
                 var link = question.links[j];
                 listElement.appendChild(createElementFromString(
                     `<li>
-                        <a href="${link.url}" target="_blank">${link.title}</a>
+                        <a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.title}</a>
                     </li>`));
             }
             fragment.appendChild(detailsElement);
@@ -54,8 +54,12 @@
     function renderQuestionGroup(groupTemplate, questionTemplate, questionsGroupsData) {
         var element = groupTemplate.cloneNode(true).querySelector(TOPIC_SECTION_SELECTOR);
         element.setAttribute('id', questionsGroupsData.id);
-    
+
+        var headingId = 'heading-' + questionsGroupsData.id;
+        element.setAttribute('aria-labelledby', headingId);
+
         var titleElement = element.querySelector(QUESTIONS_GROUP_TITLE_SELECTOR);
+        titleElement.setAttribute('id', headingId);
         titleElement.innerText = questionsGroupsData.title;
         
         renderQuestions(element.querySelector(`h3`), questionTemplate, questionsGroupsData.questions);
