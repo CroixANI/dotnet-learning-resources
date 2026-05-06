@@ -4,7 +4,7 @@
  * Usage: node scripts/check-links.mjs [--no-semantic] [--only-broken] [--concurrency N]
  */
 
-import { readdir, readFile } from 'fs/promises';
+import { readdir, readFile, writeFile, mkdir } from 'fs/promises';
 import { join, relative } from 'path';
 
 // ── CLI flags ──────────────────────────────────────────────────────────────
@@ -67,27 +67,6 @@ function makeController() {
 }
 
 const USER_AGENT = 'Mozilla/5.0 (compatible; link-checker/1.0)';
-
-async function headOrGet(url) {
-  // Try HEAD first; fall back to GET on 405 or network quirks
-  for (const method of ['HEAD', 'GET']) {
-    const { signal, cancel } = makeController();
-    try {
-      const res = await fetch(url, {
-        method,
-        redirect: 'manual',
-        signal,
-        headers: { 'User-Agent': USER_AGENT },
-      });
-      cancel();
-      return res;
-    } catch (err) {
-      cancel();
-      if (method === 'GET') throw err;
-      // HEAD failed — try GET
-    }
-  }
-}
 
 async function followRedirects(originalUrl, maxHops = 8) {
   let url = originalUrl;
@@ -201,10 +180,150 @@ async function pool(tasks, limit) {
   return results;
 }
 
+// ── Timestamp ─────────────────────────────────────────────────────────────
+
+function timestamp() {
+  const d = new Date();
+  const pad = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}` +
+    `-${pad(d.getHours())}-${pad(d.getMinutes())}-${pad(d.getSeconds())}`;
+}
+
+function formatDateTime(d = new Date()) {
+  const pad = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ` +
+    `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+}
+
+// ── Markdown report builder ────────────────────────────────────────────────
+
+function buildReport({ broken, redirected, mismatched, ok, totalUrls, totalFiles, semantic, startedAt }) {
+  const lines = [];
+  const ts = formatDateTime(startedAt);
+
+  lines.push(`# Link Check Report`);
+  lines.push(``);
+  lines.push(`**Generated:** ${ts}  `);
+  lines.push(`**Checked:** ${totalUrls} unique URLs across ${totalFiles} markdown files  `);
+  lines.push(`**Semantic detection:** ${semantic ? 'enabled' : 'disabled'}`);
+  lines.push(``);
+  lines.push(`## Summary`);
+  lines.push(``);
+  lines.push(`| Status | Count |`);
+  lines.push(`|--------|------:|`);
+  lines.push(`| 🔴 Broken | ${broken.length} |`);
+  lines.push(`| 🟡 Redirected | ${redirected.length} |`);
+  lines.push(`| 🟣 Title mismatch | ${mismatched.length} |`);
+  lines.push(`| ✅ OK | ${ok.length} |`);
+  lines.push(``);
+  lines.push(`---`);
+
+  // ── Broken ──
+  lines.push(``);
+  lines.push(`## 🔴 Broken (${broken.length})`);
+  lines.push(``);
+  if (broken.length === 0) {
+    lines.push(`_No broken links found._`);
+  } else {
+    let n = 0;
+    for (const r of broken) {
+      for (const { text, file, line } of r.occurrences) {
+        n++;
+        lines.push(`### ${n}. ${text}`);
+        lines.push(``);
+        lines.push(`| | |`);
+        lines.push(`|-|-|`);
+        lines.push(`| **File** | \`${file}:${line}\` |`);
+        lines.push(`| **URL** | <${r.url}> |`);
+        lines.push(`| **Status** | ${r.error ? `ERROR — ${r.error}` : `HTTP ${r.status}`} |`);
+        lines.push(``);
+        lines.push(`> 💡 _TODO: find 1–3 alternative links to replace this broken resource_`);
+        lines.push(``);
+      }
+    }
+  }
+
+  lines.push(`---`);
+
+  // ── Redirected ──
+  lines.push(``);
+  lines.push(`## 🟡 Redirected (${redirected.length})`);
+  lines.push(``);
+  if (redirected.length === 0) {
+    lines.push(`_No redirected links found._`);
+  } else {
+    let n = 0;
+    for (const r of redirected) {
+      for (const { text, file, line } of r.occurrences) {
+        n++;
+        lines.push(`### ${n}. ${text}`);
+        lines.push(``);
+        lines.push(`| | |`);
+        lines.push(`|-|-|`);
+        lines.push(`| **File** | \`${file}:${line}\` |`);
+        lines.push(`| **Original URL** | <${r.url}> |`);
+        lines.push(`| **Final URL** | <${r.finalUrl}> |`);
+        lines.push(`| **Status** | HTTP ${r.status} |`);
+        lines.push(``);
+      }
+    }
+  }
+
+  lines.push(`---`);
+
+  // ── Mismatch ──
+  lines.push(``);
+  lines.push(`## 🟣 Title mismatch (${mismatched.length})`);
+  lines.push(``);
+  if (mismatched.length === 0) {
+    lines.push(`_No title mismatches found._`);
+  } else {
+    let n = 0;
+    for (const r of mismatched) {
+      for (const { text, file, line } of r.occurrences) {
+        n++;
+        lines.push(`### ${n}. ${text}`);
+        lines.push(``);
+        lines.push(`| | |`);
+        lines.push(`|-|-|`);
+        lines.push(`| **File** | \`${file}:${line}\` |`);
+        lines.push(`| **URL** | <${r.url}> |`);
+        lines.push(`| **Link text** | ${text} |`);
+        lines.push(`| **Page title** | ${r.pageTitle ?? '_unknown_'} |`);
+        lines.push(`| **Match score** | ${r.score?.toFixed(2) ?? '—'} |`);
+        lines.push(``);
+      }
+    }
+  }
+
+  lines.push(`---`);
+
+  // ── OK ──
+  lines.push(``);
+  lines.push(`## ✅ OK (${ok.length})`);
+  lines.push(``);
+  lines.push(`<details>`);
+  lines.push(`<summary>Show all OK links</summary>`);
+  lines.push(``);
+  lines.push(`| File | Line | Text | URL |`);
+  lines.push(`|------|-----:|------|-----|`);
+  for (const r of ok) {
+    for (const { text, file, line } of r.occurrences) {
+      lines.push(`| \`${file}\` | ${line} | ${text} | <${r.url}> |`);
+    }
+  }
+  lines.push(``);
+  lines.push(`</details>`);
+
+  return lines.join('\n') + '\n';
+}
+
 // ── Main ───────────────────────────────────────────────────────────────────
 
+const startedAt = new Date();
 const ROOT = new URL('..', import.meta.url).pathname;
 const SRC = join(ROOT, 'src');
+const REPORTS_DIR = join(ROOT, 'reports');
 
 const files = await findMarkdownFiles(SRC);
 
@@ -242,7 +361,6 @@ const tasks = uniqueUrls.map(url => async () => {
 
     if (SEMANTIC && isOk && !shouldSkipSemantic(finalUrl)) {
       pageTitle = await fetchPageTitle(finalUrl);
-      // Check each occurrence's text for mismatch
       const texts = occurrences.map(o => o.text);
       const scores = texts.map(t => semanticScore(t, pageTitle));
       score = Math.max(...scores); // best match wins
@@ -256,12 +374,14 @@ const tasks = uniqueUrls.map(url => async () => {
 
 const results = await pool(tasks, CONCURRENCY);
 
-// ── Report ─────────────────────────────────────────────────────────────────
+// ── Classify ───────────────────────────────────────────────────────────────
 
-const broken = results.filter(r => r.isBroken || r.error);
+const broken    = results.filter(r => r.isBroken || r.error);
 const redirected = results.filter(r => !r.isBroken && !r.error && r.isRedirected);
 const mismatched = results.filter(r => !r.isBroken && !r.error && !r.isRedirected && r.score !== undefined && r.score < 0.15);
-const ok = results.filter(r => !r.isBroken && !r.error && !r.isRedirected && (r.score === undefined || r.score >= 0.15));
+const ok         = results.filter(r => !r.isBroken && !r.error && !r.isRedirected && (r.score === undefined || r.score >= 0.15));
+
+// ── Console output ─────────────────────────────────────────────────────────
 
 function printGroup(label, color, items, detail) {
   if (items.length === 0) return;
@@ -284,17 +404,35 @@ if (!ONLY_BROKEN) {
   printGroup('REDIRECT', 33, redirected, r =>
     `HTTP ${r.status} → ${r.finalUrl}`
   );
-
   printGroup('MISMATCH', 35, mismatched, r =>
     `score=${r.score?.toFixed(2)} | page title: "${r.pageTitle}"`
   );
 }
 
-console.log(`\x1b[${broken.length ? 31 : 32}m` +
+const summaryColor = broken.length ? 31 : 32;
+console.log(
+  `\x1b[${summaryColor}m` +
   `Checked ${uniqueUrls.length} links: ` +
   `${broken.length} broken, ${redirected.length} redirected, ` +
   `${mismatched.length} mismatched, ${ok.length} ok` +
   `\x1b[0m\n`
 );
+
+// ── Write markdown report ──────────────────────────────────────────────────
+
+await mkdir(REPORTS_DIR, { recursive: true });
+
+const reportName = `${timestamp()}-links-check.md`;
+const reportPath = join(REPORTS_DIR, reportName);
+const reportContent = buildReport({
+  broken, redirected, mismatched, ok,
+  totalUrls: uniqueUrls.length,
+  totalFiles: files.length,
+  semantic: SEMANTIC,
+  startedAt,
+});
+
+await writeFile(reportPath, reportContent, 'utf8');
+console.log(`Report saved: reports/${reportName}\n`);
 
 if (broken.length > 0) process.exit(1);
