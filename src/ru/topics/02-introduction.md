@@ -7,7 +7,7 @@ order: 2
 
 Основы синтаксиса языка и его основные механизмы
 
-- [Microsoft Learn — Выполните первые шаги с помощью C#](https://docs.microsoft.com/ru-ru/learn/paths/csharp-first-steps/)  
+- [Microsoft Learn — Выполните первые шаги с помощью C#](https://learn.microsoft.com/ru-ru/training/paths/get-started-c-sharp-part-1/)  
   Интерактивный курс c заданиями (8 модулей).
 
 - [Видео-курс — Основы C#](https://www.youtube.com/playlist?list=PLY4rE9dstrJxYPjMqk15Vx5aBmRaHFx_Y)  

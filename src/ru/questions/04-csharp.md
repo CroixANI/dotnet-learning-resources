@@ -6,14 +6,14 @@ order: 4
 # Вопросы по языку C#
 
 ## Что такое Heap и Stack?
-* [Статья — TProger — Основные принципы программирования: стек и куча](https://tproger.ru/translations/programming-concepts-stack-and-heap/)
+* [Статья — TProger — Основные принципы программирования: стек и куча](https://tproger.ru/translations/programming-concepts-stack-and-heap)
 * [Статья — ITVDN — Stack / Heap структуры данных в .NET](https://itvdn.com/ru/blog/article/stack-and-heap)
 
 ## Какие отличие между значимыми и ссылочными типами?
 * [Статья — Metanit — Типы значений и ссылочные типы](https://metanit.com/sharp/tutorial/2.16.php)
 
 ## Расскажи, что такое boxing и unboxing в C#
-* [Статья — Хабр — Интересные моменты в C# (boxing unboxing)](https://habr.com/ru/post/239219/)
+* [Статья — Хабр — Интересные моменты в C# (boxing unboxing)](https://habr.com/ru/articles/239219/)
 
 ## Расскажи о garbage collector-е
 * [Статья — Metanit — Сборка мусора, управление памятью и указатели](https://metanit.com/sharp/tutorial/8.1.php)
@@ -53,10 +53,10 @@ order: 4
 * [Статья — Вопросы на собеседовании C#](https://bool.dev/blog/detail/voprosy-na-sobesedovanii-po-c)
 
 ## Чем отличается поток и процесс?
-* [Статья — TProger — В чем разница между потоком и процессом?](https://tproger.ru/problems/what-is-the-difference-between-threads-and-processes/)
+* [Статья — TProger — В чем разница между потоком и процессом?](https://tproger.ru/problems/what-is-the-difference-between-threads-and-processes)
 
 ## Чем многопоточное программирование отличается от асинхронного?
-* [Статья — Хабр — Параллелизм против многопоточности против асинхронного программирования](https://habr.com/ru/post/337528/)
+* [Статья — Хабр — Параллелизм против многопоточности против асинхронного программирования](https://habr.com/ru/articles/337528/)
 * [Статья — В чем разница между асинхронным программированием и многопоточностью?](https://overcoder.net/q/21072/)
 * [Видео — Диджитализируй! — Многопроцессность, многопоточность, асинхронность](https://www.youtube.com/watch?v=JIp14T9bvvc)
 
