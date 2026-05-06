@@ -63,6 +63,32 @@
 }
 
 /* =============================================================================
+   Skip Link
+   ============================================================================= */
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  background: var(--color-accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  z-index: 9999;
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  text-decoration: none;
+  transition: transform var(--transition-fast);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* =============================================================================
    Reset
    ============================================================================= */
 
@@ -119,6 +145,23 @@ li {
 }
 
 /* =============================================================================
+   Focus Styles
+   ============================================================================= */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+summary:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* =============================================================================
    Layout
    ============================================================================= */
 
@@ -135,7 +178,8 @@ li {
   z-index: 100;
 }
 
-.container-fluid {
+.container-fluid,
+main {
   margin-left: var(--sidebar-width);
 }
 
@@ -199,6 +243,7 @@ li {
 .nav-link {
   display: block;
   padding: 0.55rem 1.25rem;
+  min-height: 44px;
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -260,13 +305,20 @@ section.resume-section {
 
 .resume-section-content {
   width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 /* =============================================================================
    Typography
    ============================================================================= */
 
-h3 {
+h1 {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
@@ -384,6 +436,7 @@ details[open] {
 summary {
   cursor: pointer;
   padding: 0.8rem 1rem 0.8rem 2.5rem;
+  min-height: 44px;
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--color-text-primary);
@@ -480,7 +533,8 @@ details ul li a:hover {
     padding: 0.75rem 1rem;
   }
 
-  .container-fluid {
+  .container-fluid,
+  main {
     margin-left: 0;
     margin-top: 56px;
   }

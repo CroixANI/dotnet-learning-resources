@@ -4,47 +4,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Примеры вопросов на собеседование по .NET, C#, ASP.NET Core, SQL и паттернам проектирования.">
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
   <script src="js/theme.js"></script>
-  <title>.NET Learning Resources — Вопросы</title>
+  <title>Примеры вопросов | .NET Learning Resources</title>
 </head>
 
 <body id="page-top">
-  <nav id="sideNav">
+  <a href="#main-content" class="skip-link">Перейти к содержимому</a>
+
+  <nav id="sideNav" aria-label="Группы вопросов">
     <div class="site-nav-header">
       <span class="site-title">.NET Learning</span>
-      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Открыть навигацию" aria-expanded="false" aria-controls="navbarSupportedContent">&#9776;</button>
     </div>
     <div id="navbarSupportedContent" class="nav-collapse">
       <ul id="main-navigation" class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
       </ul>
       <div class="sidebar-footer">
-        <button id="theme-toggle" aria-label="Toggle dark mode">◐</button>
+        <button id="theme-toggle" aria-label="Переключить тёмную тему">◐</button>
       </div>
     </div>
   </nav>
 
-  <div class="container-fluid">
-    <section class="resume-section" id="main">
+  <main id="main-content">
+    <section class="resume-section" id="main" aria-labelledby="heading-main">
       <div class="resume-section-content">
-        <h3><span class="text-primary">Примеры вопросов по .NET</span></h3>
+        <h1 id="heading-main" class="text-primary">Примеры вопросов по .NET</h1>
         <p class="subheading mb-4">Слева находятся группы вопросов их можно использовать для навигации.</p>
         <p class="subheading mb-4">В каждой группе вопросов представлены вопросы и ссылки на русскоязычные ресурсы.</p>
       </div>
     </section>
-  </div>
 
-  <div id="questions-groups-container" class="container-fluid"></div>
+    <div id="questions-groups-container"></div>
+  </main>
 
   <template id="question-group-section">
-    <section class="resume-section" id="some_id">
+    <section class="resume-section">
       <div class="resume-section-content">
-        <h3><span class="question-group-title text-primary"></span></h3>
+        <h2><span class="question-group-title text-primary"></span></h2>
       </div>
     </section>
   </template>

@@ -45,6 +45,7 @@
     }
     else {
       link.setAttribute('href', resource.url);
+      link.setAttribute('rel', 'noopener noreferrer');
       link.innerText = `${topicsResourceCounter}) ${resource.title}`;
       topicsResourceCounter++;
     }
@@ -70,7 +71,11 @@
     var element = topicTemplate.cloneNode(true).querySelector(TOPIC_SECTION_SELECTOR);
     element.setAttribute('id', data.id);
 
+    var headingId = 'heading-' + data.id;
+    element.setAttribute('aria-labelledby', headingId);
+
     var titleElement = element.querySelector(TOPIC_TITLE_SELECTOR);
+    titleElement.setAttribute('id', headingId);
     titleElement.innerText = data.title;
 
     var subTitleElement = element.querySelector(TOPIC_SUB_TITLE_SELECTOR);
