@@ -11,11 +11,11 @@ order: 7
   - База данных чего-то (фильмов, игр, велосипедов и т.п.)
   - Галерея фото / Instagram / Unsplash
   - Список заметок / Wiki / Todo список
-  - [Quizz / Опросник](https://devchallenges.io/challenges/Bu3G2irnaXmfwQ8sZkw8)
+  - Quizz / Опросник
   - Магазин
   - Расписание занятий в комнатах / Бронирование
-  - [Чат](https://devchallenges.io/challenges/UgCqszKR7Q7oqb4kRfI0)
-  - [Portfolio](https://devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt)
+  - Чат
+  - Portfolio
 
 - [Видео-курс — Loftblog — Веб-приложения на asp.net mvc core](https://www.youtube.com/playlist?list=PLY4rE9dstrJwbcnUjiL7FKd1D4CRLIMCg)  
   Хороший видео-курс на основе которого можно написать свое приложение.
