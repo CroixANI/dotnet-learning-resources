@@ -7,10 +7,10 @@ order: 3
 
 Использование системы контроля версий Git
 
-- [Tproger — Git и GitHub: что это такое и в чём разница](https://tproger.ru/translations/difference-between-git-and-github/)  
+- [Tproger — Git и GitHub: что это такое и в чём разница](https://tproger.ru/translations/difference-between-git-and-github)  
   Статья содержащая вводную по системам контроля версий.
 
-- [Tproger — Подробное введение в Git](https://tproger.ru/translations/beginner-git-cheatsheet/)  
+- [Tproger — Подробное введение в Git](https://tproger.ru/translations/beginner-git-cheatsheet)  
   Статья по базовой настройке и командам в Git.
 
 - [Видео-курс — Базовый курс по Git](https://www.youtube.com/playlist?list=PLIU76b8Cjem5B3sufBJ_KFTpKkMEvaTQR)  

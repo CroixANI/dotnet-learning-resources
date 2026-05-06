@@ -16,7 +16,7 @@ order: 10
 - [Уроки по Jenkins с нуля](https://www.youtube.com/watch?v=QvlWcxECzE8&list=RDCMUCemtVTjKhD_GcEOQ_rNOrRw)  
   Видео уроки. Плейлист.
 
-- [Ansible: официальное руководство для начинающих](https://docs.ansible.com/ansible/latest/getting_started/index.html)  
+- [Ansible: официальное руководство для начинающих](https://docs.ansible.com/projects/ansible/latest/getting_started/index.html)  
   Официальное руководство по началу работы с Ansible.
 
 - [Основы Docker. Большой практический выпуск](https://www.youtube.com/watch?v=QF4ZF857m44)  

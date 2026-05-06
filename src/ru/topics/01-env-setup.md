@@ -7,7 +7,7 @@ order: 1
 
 Установка Git, .NET Core, Visual Studio 2019 или Visual Studio Code
 
-- [Скачать Git с официального сайта](https://git-scm.com/downloads)  
+- [Скачать Git с официального сайта](https://git-scm.com/downloads/)  
   Скачайте Git с официального сайта для вашей платформы и затем установите его.
 
 - [Скачать .NET Core](https://dotnet.microsoft.com/download/dotnet-core)  

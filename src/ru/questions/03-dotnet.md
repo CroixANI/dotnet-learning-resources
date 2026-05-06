@@ -22,4 +22,4 @@ order: 3
 * [Статья — Metanit — C# Процессы и домены приложения](https://metanit.com/sharp/tutorial/18.1.php)
 
 ## Чем отличается управляемый и неуправляемый код и что это?
-* [Статья — Microsoft Docs — Что такое управляемый код](https://docs.microsoft.com/ru-ru/dotnet/standard/managed-code)
+* [Статья — Microsoft Docs — Что такое управляемый код](https://learn.microsoft.com/ru-ru/dotnet/standard/managed-code)

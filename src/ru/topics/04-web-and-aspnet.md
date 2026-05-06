@@ -10,7 +10,7 @@ order: 4
 - [Видео — АйТиБорода — Что такое хостинг, клиент-сервер и где живут сайты](https://www.youtube.com/watch?v=-WR0Cv2mmOg)  
   Вводная о том что такое сервер, клиент и немного больше.
 
-- [Html Academy — Что на самом деле происходит, когда пользователь вбивает в браузер адрес google.com](https://htmlacademy.ru/blog/education/all/brauzer-google)  
+- [Html Academy — Что на самом деле происходит, когда пользователь вбивает в браузер адрес google.com](https://htmlacademy.ru/blog/js/brauzer-google)  
   В статье рассказывается в упрощенной форме, что происходит когда мы вводим URL в браузер и нам отображается страница.
 
 - [Видео — Loftblog — HTML для начинающих](https://www.youtube.com/playlist?list=PLY4rE9dstrJyeZlPWoKJr1xKVVnG4w-Hc)  
