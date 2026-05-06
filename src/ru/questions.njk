@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+permalink: /ru/questions/
+pageTitle: "page.title.questions"
+description: "Примеры вопросов на собеседование по .NET, C#, ASP.NET Core, SQL и паттернам проектирования."
+---
+{% set t = i18n[locale] %}
+
+<section class="resume-section" id="main" aria-labelledby="heading-main">
+  <div class="resume-section-content">
+    <h1 id="heading-main" class="text-primary">{{ t["questions.title"] }}</h1>
+    <p class="subheading mb-4">{{ t["questions.intro.p1"] }}</p>
+    <p class="subheading mb-4">{{ t["questions.intro.p2"] }}</p>
+  </div>
+</section>
+
+{% for group in collections.questions_ru %}
+  <hr>
+  <section class="resume-section" id="{{ group.data.topicId }}" aria-labelledby="heading-{{ group.data.topicId }}">
+    <div class="resume-section-content">
+      <h2 id="heading-{{ group.data.topicId }}" class="text-primary">
+        {{ group.templateContent | extractH1Text }}
+      </h2>
+      <div class="questions-body">
+        {{ group.templateContent | questionsHtml | safe }}
+      </div>
+    </div>
+  </section>
+{% endfor %}

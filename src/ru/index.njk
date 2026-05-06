@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+permalink: /ru/
+pageTitle: "page.title.topics"
+description: "Ресурсы для изучения .NET с нуля: структурированные темы и ссылки на русскоязычные курсы, статьи и видео."
+---
+{% set t = i18n[locale] %}
+
+<section class="resume-section" id="main" aria-labelledby="heading-main">
+  <div class="resume-section-content">
+    <h1 id="heading-main" class="text-primary">{{ t["topics.title"] }}</h1>
+    <p class="subheading mb-4">{{ t["topics.intro.p1"] }}</p>
+    <p class="subheading mb-4">{{ t["topics.intro.p2"] }}</p>
+    <p class="subheading mb-4">{{ t["topics.intro.p3"] }}</p>
+    <p class="subheading mb-4">{{ t["topics.intro.p4"] }}</p>
+    {% include "partials/social-icons.njk" %}
+  </div>
+</section>
+
+{% for topic in collections.topics_ru %}
+  <hr>
+  <section class="resume-section" id="{{ topic.data.topicId }}" aria-labelledby="heading-{{ topic.data.topicId }}">
+    <div class="resume-section-content">
+      <div class="topic-body">
+        {{ topic.templateContent | addH1Id("heading-" + topic.data.topicId) | safe }}
+      </div>
+    </div>
+  </section>
+{% endfor %}

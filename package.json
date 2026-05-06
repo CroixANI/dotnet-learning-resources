@@ -1,0 +1,13 @@
+{
+  "name": "dotnet-learning-resources",
+  "version": "1.0.0",
+  "description": "Structured .NET learning resources with multilingual support",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy --pathprefix=/dotnet-learning-resources/"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "markdown-it": "^14.1.0"
+  }
+}
