@@ -155,6 +155,28 @@ function shouldSkipSemantic(url) {
   }
 }
 
+// Query params that servers routinely add on redirect but carry no semantic meaning.
+// If stripping these from both URLs makes them equal, the link is treated as OK.
+const NOISE_PARAMS = new Set(['cbrd', 'ucbcb']);
+const NOISE_PARAM_PREFIXES = [['view', 'aspnetcore']]; // e.g. view=aspnetcore-10.0
+
+function stripNoiseParams(url) {
+  try {
+    const u = new URL(url);
+    for (const key of [...u.searchParams.keys()]) {
+      if (NOISE_PARAMS.has(key)) { u.searchParams.delete(key); continue; }
+      for (const [param, prefix] of NOISE_PARAM_PREFIXES) {
+        if (key === param && (u.searchParams.get(key) ?? '').startsWith(prefix)) {
+          u.searchParams.delete(key);
+        }
+      }
+    }
+    return u.toString();
+  } catch {
+    return url;
+  }
+}
+
 function semanticScore(linkText, pageTitle) {
   if (isBareUrl(linkText) || !pageTitle) return 1; // skip
   const textWords = new Set(normalizeWords(linkText));
@@ -355,7 +377,7 @@ const tasks = uniqueUrls.map(url => async () => {
     finalUrl = result.finalUrl;
     error = result.error;
 
-    const isRedirected = finalUrl !== url && !error;
+    const isRedirected = stripNoiseParams(finalUrl) !== stripNoiseParams(url) && !error;
     const isOk = status >= 200 && status < 300;
     const isBroken = status >= 400 || status === 0;
 
