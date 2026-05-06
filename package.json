@@ -4,7 +4,8 @@
   "description": "Structured .NET learning resources with multilingual support",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy --pathprefix=/dotnet-learning-resources/"
+    "build": "eleventy --pathprefix=/dotnet-learning-resources/",
+    "check-links": "node scripts/check-links.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
